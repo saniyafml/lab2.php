@@ -6,8 +6,6 @@
   $bg_color="#fff";
   if(isset($_GET["iv_color"]))
     $bg_color=$_GET["iv_color"];
-  else
-    $bg_color="#fff";
 ?>
 <!doctype html>
 <html lang="en">

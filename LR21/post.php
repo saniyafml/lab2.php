@@ -6,8 +6,6 @@
   $bg_color="#fff";
   if(isset($_POST["iv_color"]))
     $bg_color=$_POST["iv_color"];
-  else
-    $bg_color="#fff";
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,8 +1,4 @@
 <?
-  if(isset($_POST["iv_color"]))
-    print_r($_POST["iv_color"]);
-?>
-<?
   $bg_color="#fff";
   if(isset($_POST["iv_color"]))
     $bg_color=$_POST["iv_color"];
@@ -23,7 +19,7 @@
       <form action="/khadynova/LR2/LR21/post.php" method="POST">
         <div class="mb-3">
           <label for="exampleColorInput" class="form-label">Color picker</label>
-          <input name="iv_color" type="color" class="form-control" value="#ffffff" title="Choose your color">
+          <input name="iv_color" type="color" class="form-control form-control-color" value="#ffffff" title="Choose your color">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>      
     </form>

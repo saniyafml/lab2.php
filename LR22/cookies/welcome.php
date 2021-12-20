@@ -1,6 +1,7 @@
 <?
-if(!isset($_COOKIE["email"]))
-  {header("Location:/khadynova/LR2/LR22/cookies/index.php");}
+if(!isset($_COOKIE["email{
+header("Location:/khadynova/LR2/LR22/cookies/index.php");
+}
   $user_email=$_COOKIE["email"];
   if(isset($_GET["logout"]) && $_GET["logout"]=="yes"){
     setcookie("email","");

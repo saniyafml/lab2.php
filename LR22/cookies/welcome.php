@@ -1,5 +1,5 @@
 <?
-if(!isset($_COOKIE["email{
+if(!isset($_COOKIE["email"])){
 header("Location:/khadynova/LR2/LR22/cookies/index.php");
 }
   $user_email=$_COOKIE["email"];

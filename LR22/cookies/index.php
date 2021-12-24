@@ -8,7 +8,7 @@ if(isset($_COOKIE["email"])&&isset($_COOKIE["psw"])){
     setcookie("email",$user_email,time()+3600);
     setcookie("psw",$user_pass,time()+3600);
     header("Location:/khadynova/LR2/LR22/cookies/welcome.php");
-  }elseif($_POST["psw"]!="" && $_POST["psw"]!="123456"){
+  }elseif(isset($_POST["email"]) && $_POST["psw"]!="" && $_POST["psw"]!="123456"){
     $_error=1;
   }
 

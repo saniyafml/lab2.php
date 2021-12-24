@@ -1,5 +1,5 @@
 <?
-unset($_GET['error']);
+$_error=0;
 if(isset($_COOKIE["email"])&&isset($_COOKIE["psw"])){
   header("Location:/khadynova/LR2/LR22/welcome.php");
 }elseif(isset($_POST["email"]) && isset($_POST["psw"]) && $_POST["psw"]!="" && $_POST["psw"]=="123456"){
@@ -9,7 +9,7 @@ if(isset($_COOKIE["email"])&&isset($_COOKIE["psw"])){
     setcookie("psw",$user_pass,time()+3600);
     header("Location:/khadynova/LR2/LR22/cookies/welcome.php");
   }elseif($_POST["psw"]!="" && $_POST["psw"]!="123456"){
-    $_GET['error']=1;
+    $_error=1;
   }
 
 ?>
@@ -37,7 +37,7 @@ if(isset($_COOKIE["email"])&&isset($_COOKIE["psw"])){
           <input type="text" placeholder="email..." name="email" required>
           <label for="psw"><b>Пароль</b></label>
           <input type="password" placeholder="Пароль..." name="psw" required>
-          <?php if(isset($_GET['error']) && $_GET['error'] == 1){ ?>
+          <?php if($_error == 1){ ?>
         <p style="color:red;">Неверный пароль</p> 
       <?php } ?>
           <button type="submit">Отправить</button>

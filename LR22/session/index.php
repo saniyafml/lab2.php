@@ -10,7 +10,7 @@ elseif(isset($_POST["email"]) && isset($_POST["psw"]) && $_POST["psw"]!="" && $_
     $_SESSION["email"]=$user_email;
     $_SESSION["psw"]=$user_pass;
     header("Location:/khadynova/LR2/LR22/session/welcome.php");
-  }elseif($_POST["psw"]!="" && $_POST["psw"]!="123456"){
+  }elseif(isset($_POST["email"]) && $_POST["psw"]!="" && $_POST["psw"]!="123456"){
     $_SESSION['error']=$error;
   }
 

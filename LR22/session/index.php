@@ -13,7 +13,6 @@ elseif(isset($_POST["email"]) && isset($_POST["psw"]) && $_POST["psw"]!="" && $_
   }elseif(isset($_POST["email"]) && $_POST["psw"]!="" && $_POST["psw"]!="123456"){
     $_SESSION['error']=$error;
   }
-
 ?>
 
 <!doctype html>
